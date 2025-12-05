@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Environment variables
+project.env
+*.env
+!project.env.example
+
+# Cache and state files
+cache/
+temp/
+*.jsonl
+
+# Generated feeds
+**/country_feed_*.tsv
+**/country_feed_*.csv
+**/country_feed_*.xml
+
+# Google service account keys
+*.json
+!project.env.example
+!requirements.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Logs
+*.log
+
+# Keep nested .git folders if you want to preserve history
+# Uncomment if you want to keep nested repos as submodules later
+# .gitmodules
+
+backup*

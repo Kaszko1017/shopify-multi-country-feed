@@ -1,0 +1,40 @@
+# Environment files
+.env
+project.env
+*.env
+
+# Cache and temporary directories
+cache/
+temp/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output directories (generated files - exclude from version control)
+Google Merchant - country feed updates/
+
+# Logs
+*.log
+
+# Google service account files
+service-account-*.json
+*.json
+!.devcontainer.json
+
+# State files
+state_*.json
+mapping_*.json 

@@ -1,0 +1,25 @@
+# docker-compose.yml
+version: "3.8"
+
+services:
+  sync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shopify-sync-app
+    # Supply your Shopify & Drive creds here
+    env_file:
+      - project.env
+    volumes:
+      - cache:/app/cache
+      - temp:/app/temp
+      - "Meta-catalog-country-feed-updates:/app/Meta catalog - country feed updates"
+    working_dir: /app
+    # By default runs `python main.py smart`; cron can do:
+    # docker-compose run --rm sync full
+    entrypoint: ["python", "main.py"]
+    command: ["smart"]
+volumes:
+  cache:
+  temp:
+  Meta-catalog-country-feed-updates:

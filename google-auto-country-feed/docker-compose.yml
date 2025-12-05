@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  sync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: google-merchant-sync
+    env_file:
+      - project.env
+    volumes:
+      - cache:/app/cache
+      - temp:/app/temp
+      - "Google-Merchant-country-feed-updates:/app/Google Merchant - country feed updates"
+    working_dir: /app
+    entrypoint: ["python", "main.py"]
+    command: ["smart"]
+
+volumes:
+  cache:
+  temp:
+  Google-Merchant-country-feed-updates:

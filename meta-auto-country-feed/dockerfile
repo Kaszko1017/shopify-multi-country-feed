@@ -1,0 +1,18 @@
+# Dockerfile
+FROM python:3.10-slim
+
+# Ensure output is unbuffered for real-time logs
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . .
+
+# Default to running the smart sync; cron jobs can override to `full` or `incremental`
+ENTRYPOINT ["python", "main.py"]
+CMD ["smart"]

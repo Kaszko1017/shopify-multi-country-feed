@@ -1,0 +1,8 @@
+*.env
+.DS_Store
+*.json
+temp/
+__pycache__
+.category_created
+cache/
+Meta catalog - country feed updates/
