@@ -1,0 +1,22 @@
+services:
+  sync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shopify-multi-country-feed-sync
+    env_file:
+      - project.env
+    volumes:
+      - cache:/app/cache
+      - temp:/app/temp
+      - "google-feeds:/app/Google Merchant - country feed updates"
+      - "meta-feeds:/app/Meta catalog - country feed updates"
+    working_dir: /app
+    entrypoint: ["python", "main.py"]
+    command: ["smart", "--target", "google"]
+
+volumes:
+  cache:
+  temp:
+  google-feeds:
+  meta-feeds:

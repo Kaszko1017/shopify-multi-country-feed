@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+.coverage
+htmlcov/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Environment and secrets
+project.env
+.env
+*.env
+!project.env.example
+
+# Google service account keys (never commit)
+service-account*.json
+*-credentials.json
+*.json
+!project.env.example
+!requirements.txt
+!.devcontainer.json
+
+# Cache and state files
+cache/
+temp/
+*.jsonl
+state_*.json
+mapping_*.json
+
+# Generated feeds
+**/country_feed_*.tsv
+**/country_feed_*.csv
+**/country_feed_*.xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Logs
+*.log
+
+# Keep nested .git folders if you want to preserve history
+# Uncomment if you want to keep nested repos as submodules later
+# .gitmodules
+
+backup*
+Google Merchant - country feed updates/
+Meta catalog - country feed updates/
